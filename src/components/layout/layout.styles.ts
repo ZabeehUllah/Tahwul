@@ -14,6 +14,7 @@ const mainContent: SxProps = {
 };
 
 const outletContent: SxProps = {
+  backgroundColor: "#E0E8ED",
   flex: 1,
   p: 3,
   overflowY: "auto",

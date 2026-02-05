@@ -1,7 +1,10 @@
-const StrategicPlanning = () => {
+import StrategicPlanning from "../features/strategic-planning/strategic-planning.component"
+
+
+const StrategicPlanningPage = () => {
   return (
-    <div>StrategicPlanning</div>
+      <StrategicPlanning />
   )
 }
 
-export default StrategicPlanning
+export default StrategicPlanningPage
