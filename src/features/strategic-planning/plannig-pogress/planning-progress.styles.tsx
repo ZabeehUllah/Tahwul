@@ -13,7 +13,7 @@ const contentWrapper: SxProps = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
-  gap: "10px",
+  gap: "5px",
 };
 
 const chipStyles: SxProps = {
