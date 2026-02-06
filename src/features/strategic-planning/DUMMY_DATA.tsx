@@ -4,6 +4,7 @@ import InProgressIcon from "../../assets/inProgressIcon";
 import UnderReviewIcon from "../../assets/underReviewIcon";
 import type { Column } from "../../components/table-component/table-component.types";
 import type { User } from "../../types/common.types";
+import { getStatusStyles } from "../../utils/status-styles.util";
 
 export const OverviewCardsData = [
   {
@@ -175,18 +176,7 @@ export const columns: Column<User>[] = [
         style={{
           padding: "4px 12px",
           borderRadius: "12px",
-          backgroundColor:
-            value === "Approved"
-              ? "#e8f5e9"
-              : value === "Pending"
-                ? "#fff3e0"
-                : "#ffebee",
-          color:
-            value === "Approved"
-              ? "#2e7d32"
-              : value === "Pending"
-                ? "#ef6c00"
-                : "#c62828",
+          ...getStatusStyles(value),
         }}
       >
         {value}

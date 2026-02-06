@@ -9,12 +9,9 @@ import {
   type ToggleTabValue,
 } from "./toggle-switch/toggle-componen.constants";
 
-import { columns, OverviewCardsData, rows } from "./DUMMY_DATA";
-import CustomDataGrid from "../../components/table-component/table-compoent";
-import Comments from "./evidence/comments/comments.component";
-import RecentActivities from "./evidence/recent-activities/recent-activities.component";
-import LeadersSection from "./overview/leaders/leaders.component";
-import DetailsTable from "./overview/details-table/details-table";
+import styles from "./strategic-planning.styles";
+import { TAB_CONTENT } from "./strategic-planning.constant";
+import { OverviewCardsData } from "./DUMMY_DATA";
 
 const StrategicPlanning = () => {
   const [activeTab, setActiveTab] = useState<ToggleTabValue>(
@@ -26,13 +23,12 @@ const StrategicPlanning = () => {
   };
 
   return (
-    <Box
-      sx={{ display: "flex", flexDirection: "column", gap: 2, width: "100%" }}
-    >
+    <Box sx={styles.container}>
       <PlanningProgress progress={100} />
-      <Box sx={{ display: "flex", gap: 2, width: "100%" }}>
-        {OverviewCardsData.map(({ id, label, value, icon }) => (
-          <StatsCard key={id} label={label} value={value} icon={icon} />
+
+      <Box sx={styles.statsWrapper}>
+        {OverviewCardsData.map((card) => (
+          <StatsCard key={card.id} {...card} />
         ))}
       </Box>
 
@@ -41,37 +37,7 @@ const StrategicPlanning = () => {
         onTabChange={handleActiveTabChange}
       />
 
-      {activeTab === ToggleTabs.EVIDENCE && (
-        <>
-          <CustomDataGrid
-            rows={rows}
-            columns={columns}
-            keyExtractor={(row) => row.id}
-            headerBgColor="#F5F8FB"
-            borderRadius="12px"
-            stickyHeader
-            rowHover
-            onRowClick={() => console.log("Row")}
-          />
-
-          <Box sx={{ display: "flex", width: "100%", gap: 2 }}>
-            <Box sx={{ width: "70%" }}>
-              <Comments />
-            </Box>
-
-            <Box sx={{ width: "30%" }}>
-              <RecentActivities />
-            </Box>
-          </Box>
-        </>
-      )}
-
-      {activeTab === ToggleTabs.OVERVIEW && (
-        <>
-          <DetailsTable />
-          <LeadersSection />
-        </>
-      )}
+      {TAB_CONTENT[activeTab]}
     </Box>
   );
 };

@@ -1,10 +1,7 @@
-import StrategicPlanning from "../features/strategic-planning/strategic-planning.component"
-
+import StrategicPlanning from "../features/strategic-planning/strategic-planning.component";
 
 const StrategicPlanningPage = () => {
-  return (
-      <StrategicPlanning />
-  )
-}
+  return <StrategicPlanning />;
+};
 
-export default StrategicPlanningPage
+export default StrategicPlanningPage;
