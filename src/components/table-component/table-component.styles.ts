@@ -2,9 +2,9 @@ import type { SxProps, Theme } from "@mui/material";
 
 const tableContainer = (borderRadius: number | string): SxProps<Theme> => ({
   borderRadius,
-  overflow: "hidden",
+  overflow: "auto",
   boxShadow: "none",
-  border: "1px solid #e0e0e0",
+  border: "1px solid #E0E8ED",
 });
 
 const headerCell = (
@@ -15,6 +15,7 @@ const headerCell = (
   fontWeight: 600,
   minWidth,
   backgroundColor: headerBgColor,
+  textWrap: "nowrap",
   borderBottom: "none",
   "&:first-of-type": {
     borderTopLeftRadius: borderRadius,

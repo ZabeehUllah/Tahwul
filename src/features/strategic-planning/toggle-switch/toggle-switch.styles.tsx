@@ -6,11 +6,13 @@ const toggleSwitchWrapper: SxProps = {
   height: "40px",
   width: "250px",
   padding: "5px",
-  maxWidth: "300px",
   position: "relative",
   display: "flex",
   overflow: "hidden",
   backgroundColor: "#c8cdd1",
+  "@media (max-width: 600px)": {
+    width: "200px",
+  }
 };
 
 const toggleSwitchIndicator = (activeTab: ToggleTabValue): SxProps => ({
@@ -23,6 +25,10 @@ const toggleSwitchIndicator = (activeTab: ToggleTabValue): SxProps => ({
   transform: `translateX(${activeTab === ToggleTabs.OVERVIEW ? 0 : "125px"})`,
   zIndex: 1,
   boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
+  "@media (max-width: 600px)": {
+    width: "100px",
+    transform: `translateX(${activeTab === ToggleTabs.OVERVIEW ? 0 : "100px"})`,
+  }
 });
 
 const buttonStyles = (isActive: boolean): SxProps => ({
@@ -47,6 +53,9 @@ const buttonStyles = (isActive: boolean): SxProps => ({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
+  },
+  "@media (max-width: 600px)": {
+    width: "100px",
   }
 });
 

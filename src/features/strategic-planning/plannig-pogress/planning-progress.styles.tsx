@@ -7,6 +7,10 @@ const planningProgressWrapper: SxProps = {
   backgroundColor: "#FFFFFF",
   borderRadius: "10px",
   padding: "20px",
+  "@media (max-width: 900px)": {
+    flexDirection: "column",
+    gap: 5,
+  },
 };
 
 const contentWrapper: SxProps = {

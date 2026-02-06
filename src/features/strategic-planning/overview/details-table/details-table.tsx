@@ -12,7 +12,7 @@ const DetailsTable = () => {
           <Box sx={styles.labelBox}>
             <Typography sx={styles.labelText}>{label}</Typography>
           </Box>
-
+          
           <Box sx={styles.contentBox}>
             <Typography>{content}</Typography>
           </Box>

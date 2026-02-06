@@ -19,7 +19,7 @@ export default function ComplianceScoreChart() {
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                border: "1px solid #E0E0E0"
+                border: "1px solid #E0E8ED"
             }}
         >
             <Typography variant="h6" fontWeight="bold" sx={{ mb: 2, color: "#424242" }}>

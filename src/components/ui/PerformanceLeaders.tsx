@@ -28,7 +28,7 @@ export default function PerformanceLeaders() {
             sx={{
                 borderRadius: 4,
                 height: "100%",
-                border: "1px solid #E0E0E0"
+                border: "1px solid #E0E8ED"
             }}
         >
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2.5 }}>

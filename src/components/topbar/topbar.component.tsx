@@ -12,9 +12,9 @@ import {
   Badge,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useState, type MouseEvent } from "react";
+import NotificationIcon from "../../assets/notificationIcon";
+import CaretDown from "../../assets/caretDownIcon";
 
 export default function Topbar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -40,9 +40,10 @@ export default function Topbar() {
             width: 320,
             px: 2,
             py: 0.5,
-            borderRadius: 4,
+            borderRadius: 2,
             bgcolor: "#f3f4f6",
             boxShadow: "none",
+            border: "1px solid #E0E8ED",
           }}
         >
           <SearchIcon sx={{ color: "#9ca3af", mr: 1 }} />
@@ -57,9 +58,9 @@ export default function Topbar() {
             <Badge
               variant="dot"
               color="error"
-              sx={{ "& .MuiBadge-badge": { top: 6, right: 6 } }}
+              sx={{ "& .MuiBadge-badge": { top: 2, right: 4 } }}
             >
-              <NotificationsNoneIcon />
+              <NotificationIcon />
             </Badge>
           </IconButton>
 
@@ -71,9 +72,11 @@ export default function Topbar() {
               alignItems: "center",
               gap: 1,
               cursor: "pointer",
-              px: 1.5,
+              px: 0.5,
               py: 0.5,
+              pr: 1.25,
               borderRadius: 100,
+              bgcolor: "#F9FAFA",
               "&:hover": { bgcolor: "#f3f4f6" },
             }}
           >
@@ -84,7 +87,7 @@ export default function Topbar() {
             <Typography fontSize={14} fontWeight={500}>
               Mohamed
             </Typography>
-            <ArrowDropDownIcon />
+            <CaretDown />
           </Box>
 
           <Menu

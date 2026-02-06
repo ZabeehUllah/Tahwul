@@ -2,7 +2,7 @@ import type { SxProps } from "@mui/material";
 
 const statsCardWrapper: SxProps = {
   display: "flex",
-  flexGrow: 1,
+  flex: 1,
   alignItems: "center",
   gap: 3,
   backgroundColor: "#FFFFFF",
