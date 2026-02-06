@@ -41,7 +41,7 @@ const logo = (isCollapsed: boolean): SxProps => ({
   height: 40,
   "&>img": {
     height: isCollapsed ? 20 : 40,
-  }
+  },
 });
 
 const menu: SxProps = {
@@ -49,6 +49,7 @@ const menu: SxProps = {
   display: "flex",
   flexDirection: "column",
   gap: 1,
+  marginTop: "20px",
 };
 
 const menuItem: SxProps = {
@@ -100,4 +101,14 @@ const toggleButton: SxProps = {
   },
 };
 
-export default { drawer, paper, logoContainer, logo, menu, menuItem, icon, footer, toggleButton };
+export default {
+  drawer,
+  paper,
+  logoContainer,
+  logo,
+  menu,
+  menuItem,
+  icon,
+  footer,
+  toggleButton,
+};
