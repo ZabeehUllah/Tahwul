@@ -31,8 +31,12 @@ export default function PerformanceLeaders() {
                 border: "1px solid #E0E0E0"
             }}
         >
-            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", px: 2, py: 2 }}>
-                <Typography variant="h6" fontWeight="bold" sx={{ color: "#424242" }}>
+            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2.5 }}>
+                <Typography sx={{
+                    fontSize: "1rem",
+                    fontWeight: 700,
+                    color: "#1D3557",
+                }}>
                     Top Performing Perspective Leaders
                 </Typography>
             </Box>

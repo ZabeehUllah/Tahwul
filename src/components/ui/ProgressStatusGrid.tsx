@@ -307,7 +307,11 @@ export default function ProgressStatusGrid() {
                 flexWrap: "wrap",
                 gap: 2
             }}>
-                <Typography variant="h6" fontWeight="bold" sx={{ color: "#1D3557" }}>
+                <Typography sx={{
+                    fontSize: "1rem",
+                    fontWeight: 700,
+                    color: "#1D3557",
+                }}>
                     Progress Status
                 </Typography>
 
@@ -454,6 +458,6 @@ export default function ProgressStatusGrid() {
                     ))}
                 </Box>
             </Box>
-        </Box>
+        </Box >
     );
 }

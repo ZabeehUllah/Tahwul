@@ -4,8 +4,8 @@ import StatsOverview from "../components/ui/StatsOverview";
 import ProgressStatusGrid from "../components/ui/ProgressStatusGrid";
 import RadialScoreChart from "../components/ui/RadialScoreChart";
 import PerformanceLeaders from "../components/ui/PerformanceLeaders";
-import RecentActivities from "../components/ui/RecentActivities";
 import PerformanceBarChart from "../components/ui/PerformanceBarChart";
+import RecentActivities from "../features/strategic-planning/evidence/recent-activities/recent-activities.component";
 
 const Dashboard = () => {
   return (
@@ -36,7 +36,7 @@ const Dashboard = () => {
         <Grid size={{ xs: 12, md: 4 }}>
           <PerformanceLeaders />
         </Grid>
-        <Grid size={{ xs: 12, md: 4 }}>
+        <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex' }}>
           <RecentActivities />
         </Grid>
 

@@ -78,7 +78,11 @@ export default function TimelineSection() {
     return (
         <Paper sx={{ px: 2, py: 4, borderRadius: 4, border: "2px solid #E0E8ED", backgroundColor: "#fff" }} elevation={0}>
             <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2, alignItems: "center" }}>
-                <Typography variant="h6" fontWeight="bold" sx={{ color: "#1D3557" }}>Project Timeline</Typography>
+                <Typography sx={{
+                    fontSize: "1rem",
+                    fontWeight: 700,
+                    color: "#1D3557",
+                }}>Project Timeline</Typography>
                 <Box sx={{ border: "1px solid #E0E8ED", borderRadius: 2, px: 2, py: 0.8, fontSize: 14, cursor: "pointer", color: "#1565C0", fontWeight: 600, display: "flex", alignItems: "center", gap: 1 }}>
                     2026 <span style={{ fontSize: 10 }}>▼</span>
                 </Box>
@@ -100,6 +104,6 @@ export default function TimelineSection() {
                     ))}
                 </Stepper>
             </Box>
-        </Paper>
+        </Paper >
     );
 }

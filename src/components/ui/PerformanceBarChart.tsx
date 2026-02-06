@@ -27,7 +27,12 @@ export default function PerformanceBarChart() {
             }}
         >
             <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
-                <Typography variant="h6" fontWeight="bold" sx={{ p: 2, color: "#424242" }}>
+                <Typography sx={{
+                    fontSize: "1rem",
+                    fontWeight: 700,
+                    color: "#1D3557",
+                    p: 2.5
+                }}>
                     12-Month Performance
                 </Typography>
                 {/* Placeholder for potential actions */}

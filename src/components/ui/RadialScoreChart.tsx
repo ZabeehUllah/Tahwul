@@ -48,7 +48,12 @@ export default function RadialScoreChart({
                 border: "1px solid #E0E0E0"
             }}
         >
-            <Typography variant="h6" fontWeight="bold" sx={{ px: 2, py: 2, color: "#424242" }}>
+            <Typography sx={{
+                fontSize: "1rem",
+                fontWeight: 700,
+                color: "#1D3557",
+                p: 2.5
+            }}>
                 {title}
             </Typography>
 
