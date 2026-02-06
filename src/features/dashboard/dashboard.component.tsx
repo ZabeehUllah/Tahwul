@@ -19,7 +19,7 @@ const Dashboard = () => {
         <StatsOverview />
       </Box>
 
-      <Box sx={dashboardStyles.fullWidthBox}>
+      <Box sx={dashboardStyles.progressStatusGrid}>
         <ProgressStatusGrid />
       </Box>
 

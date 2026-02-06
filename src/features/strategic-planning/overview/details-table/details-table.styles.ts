@@ -21,12 +21,18 @@ const verticalLine: SxProps = {
   width: "1px",
   backgroundColor: "#E0E8ED",
   zIndex: 1,
+  "@media (max-width: 600px)": {
+    display: "none",
+  },
 };
 
 const row: SxProps = {
   display: "flex",
   gap: 2,
   paddingY: 1,
+  "@media (max-width: 600px)": {
+    flexDirection: "column",
+  },
 };
 
 const labelBox: SxProps = {
@@ -40,6 +46,11 @@ const labelBox: SxProps = {
   boxSizing: "border-box",
   position: "relative",
   zIndex: 2,
+  "@media (max-width: 600px)": {
+    minWidth: "100%",
+    maxWidth: "100%",
+    bgcolor: "#e3e3e3ff",
+  },
 };
 
 const labelText: SxProps = {

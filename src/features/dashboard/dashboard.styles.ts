@@ -9,6 +9,9 @@ const container: SxProps<Theme> = {
 const fullWidthBox: SxProps<Theme> = {
   width: "100%",
 };
+const progressStatusGrid: SxProps<Theme> = {
+  width: "100%",
+};
 
 const recentActivitiesGrid: SxProps<Theme> = {
   display: "flex",
@@ -25,6 +28,7 @@ const radialChartWrapper = (height: number | string = "100%"): SxProps<Theme> =>
 export default {
   container,
   fullWidthBox,
+  progressStatusGrid,
   recentActivitiesGrid,
   radialChartWrapper,
 };

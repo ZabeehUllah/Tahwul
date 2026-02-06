@@ -347,7 +347,9 @@ export default function ProgressStatusGrid() {
                     display: "flex",
                     gap: 2,
                     pb: 0.5,
-                    // minWidth: "max-content",
+                    "@media (max-width: 1200px)": {
+                        flexWrap: "wrap",
+                    }
                 }}>
                     {data.map((card, index) => (
                         <Box
@@ -358,6 +360,12 @@ export default function ProgressStatusGrid() {
                                 display: "flex",
                                 flexDirection: "column",
                                 gap: 1,
+                                "@media (max-width: 1200px)": {
+                                    flex: "1 1 45%",
+                                },
+                                "@media (max-width: 600px)": {
+                                    flex: "1 1 100%",
+                                },
                             }}
                         >
                             {/* Header */}

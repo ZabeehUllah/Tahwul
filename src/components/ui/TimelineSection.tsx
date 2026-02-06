@@ -1,15 +1,17 @@
-import { Box, Typography, Paper } from "@mui/material";
+import { Box, Typography, Paper, useMediaQuery } from "@mui/material";
+import CaretDown from "../../assets/caretDownIcon";
 
 const steps = [
     { label: "Kickoff Workshop", date: "Mar 17", status: "completed" },
     { label: "Data Collection", date: "March 18", status: "active" },
     { label: "Initial Phase", date: "May 8", status: "future" },
-    { label: "Verification", date: "May 9 - July 12", status: "future" },
+    { label: "Verification", date: "May 9", status: "future" },
     { label: "Completion Reviews", date: "July 13", status: "future" },
     { label: "Cycle Conclusion", date: "August 21", status: "future" },
 ];
 
 export default function TimelineSection() {
+    const isMobile = useMediaQuery("(max-width:600px)");
     const activeIndex = steps.findIndex(step => step.status === "active");
 
     return (
@@ -33,14 +35,14 @@ export default function TimelineSection() {
                         border: "1px solid #E0E8ED",
                         borderRadius: 2,
                         px: 2,
-                        py: 0.5,
+                        py: 1,
                         fontSize: 14,
                         fontWeight: 600,
                         color: "#1D3557",
                         cursor: "pointer",
                     }}
                 >
-                    2026 ▼
+                    2026 <CaretDown />
                 </Box>
             </Box>
 
@@ -135,9 +137,9 @@ export default function TimelineSection() {
                         key={step.label}
                         sx={{
                             textAlign: "center",
-                            fontSize: 14,
+                            fontSize: isMobile ? 8 : 14,
                             color: "#8597A8",
-                            mb: 0
+                            mb: 0,
                         }}
                     >
                         {step.date}
@@ -157,7 +159,7 @@ export default function TimelineSection() {
                         key={step.label}
                         sx={{
                             textAlign: "center",
-                            fontSize: 14,
+                            fontSize: isMobile ? 8 : 14,
                             fontWeight: 500,
                             color: "#1D3557",
                         }}

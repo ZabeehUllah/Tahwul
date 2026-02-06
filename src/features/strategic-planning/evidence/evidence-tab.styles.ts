@@ -4,14 +4,17 @@ const evidenceSection: SxProps = {
   display: "flex",
   width: "100%",
   gap: 2,
+  "@media (max-width: 900px)": {
+    flexDirection: "column",
+  },
 };
 
 const commentsWrapper: SxProps = {
-  width: "70%",
+  flex: 2,
 };
 
 const recentActivitiesWrapper: SxProps = {
-  width: "30%",
+  flex: 1,
 };
 
 export default {

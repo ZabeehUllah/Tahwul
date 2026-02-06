@@ -3,6 +3,9 @@ import type { SxProps } from "@mui/material";
 const container: SxProps = {
   display: "flex",
   gap: 1,
+  "@media (max-width: 600px)": {
+    flexDirection: "column",
+  },
 };
 
 const card: SxProps = {
