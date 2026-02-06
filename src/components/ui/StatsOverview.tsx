@@ -1,23 +1,24 @@
 import { Grid, Paper, Typography, Box } from "@mui/material";
-import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
-import FolderOutlinedIcon from '@mui/icons-material/FolderOutlined';
-import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
-import PieChartOutlinedIcon from '@mui/icons-material/PieChartOutlined';
-import AutorenewOutlinedIcon from '@mui/icons-material/AutorenewOutlined';
+import ChartBarLineIcon from "../../assets/chartBarLineIcon";
+import FolderIcon from "../../assets/folderIcon";
+import FolderCheckIcon from "../../assets/folderCheckIcon";
+import FileSecurityIcon from "../../assets/fileSecurity";
+import FileVerifiedIcon from "../../assets/fileVerifiedIcon";
 
 const stats = [
-    { label: "Overall Progress", value: "78.65%", icon: <Inventory2OutlinedIcon sx={{ color: "#f44336" }} />, sub: "Overall Progress" },
-    { label: "Total Criteria", value: "95", icon: <FolderOutlinedIcon sx={{ color: "#f44336" }} />, sub: "Total Criteria" },
-    { label: "Completed Criteria", value: "52", icon: <FileCopyOutlinedIcon sx={{ color: "#f44336" }} />, sub: "Completed Criteria" },
-    { label: "Evidence Documents", value: "302", icon: <PieChartOutlinedIcon sx={{ color: "#f44336" }} />, sub: "Evidence (Completed)" },
-    { label: "Uploaded To DGA", value: "258", icon: <AutorenewOutlinedIcon sx={{ color: "#f44336" }} />, sub: "Uploaded To DGA" },
+    { label: "Overall Progress", value: "78.65%", icon: <ChartBarLineIcon />, sub: "Overall Progress" },
+    { label: "Total Criteria", value: "95", icon: <FolderIcon />, sub: "Total Criteria" },
+    { label: "Completed Criteria", value: "52", icon: <FolderCheckIcon />, sub: "Completed Criteria" },
+    { label: "Evidence Documents", value: "302", icon: <FileSecurityIcon />, sub: "Evidence (Completed)" },
+    { label: "Evidence (Completed)", value: "302", icon: <FileVerifiedIcon />, sub: "Uploaded To DGA" },
+    { label: "Uploaded to DGA", value: "258", icon: <FileVerifiedIcon />, sub: "Uploaded to DGA" },
 ];
 
 export default function StatsOverview() {
     return (
         <Grid container spacing={2}>
             {stats.map((stat, index) => (
-                <Grid size={{ xs: 12, sm: 6, md: 2.4 }} key={index}>
+                <Grid size={{ xs: 12, sm: 6, md: 2 }} key={index}>
                     <Paper
                         elevation={0}
                         sx={{
@@ -26,23 +27,24 @@ export default function StatsOverview() {
                             display: "flex",
                             flexDirection: "column",
                             justifyContent: "space-between",
-                            border: "1px solid #E0E8ED", // Light blue border
+                            border: "1px solid #E0E8ED",
                             transition: "all 0.3s",
                             "&:hover": {
                                 boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
                             }
                         }}
                     >
-                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "start", p: 2.5 }}>
+                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "start", p: 2 }}>
                             <Box>
-                                <Typography variant="h4" fontWeight="bold" sx={{ color: "#1A237E" }}>{stat.value}</Typography>
-                                <Typography variant="caption" color="text.secondary" sx={{ fontSize: 13, fontWeight: 500 }}>{stat.sub}</Typography>
+                                <Typography variant="h4" sx={{ color: "#1D3557", fontWeight: 700 }}>{stat.value}</Typography>
+                                <Typography variant="caption" color="##8597A8" sx={{ fontSize: 13 }}>{stat.sub}</Typography>
                             </Box>
-                            {stat.icon}
+                            <Box sx={{ pt: 0.5 }}>{stat.icon}</Box>
                         </Box>
                     </Paper>
                 </Grid>
-            ))}
-        </Grid>
+            ))
+            }
+        </Grid >
     );
 }

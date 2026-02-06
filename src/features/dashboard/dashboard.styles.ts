@@ -15,7 +15,7 @@ const recentActivitiesGrid: SxProps<Theme> = {
 };
 
 const radialChartWrapper = (height: number | string = "100%"): SxProps<Theme> => ({
-  width: "100%",
+  // width: "100%",
   height,
   display: "flex",
   justifyContent: "center",

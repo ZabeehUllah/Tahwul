@@ -2,8 +2,10 @@ const paths = {
     DEFAULT: '/',
     DASHBOARD: '/dashboard',
     STRATEGIC_PLANNING: '/strategic-planning',
+    TRACKING: '/tracking',
+    DOCUMENTS: '/documents',
 
-    ALL: '*',   
+    ALL: '*',
 }
 
 export default paths;

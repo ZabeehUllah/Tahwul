@@ -4,7 +4,7 @@ const tableContainer = (borderRadius: number | string): SxProps<Theme> => ({
   borderRadius,
   overflow: "hidden",
   boxShadow: "none",
-  border: "1px solid #e0e0e0",
+  border: "1px solid #E0E8ED",
 });
 
 const headerCell = (

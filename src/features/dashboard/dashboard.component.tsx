@@ -24,7 +24,7 @@ const Dashboard = () => {
       </Box>
 
       <Grid container spacing={2}>
-        <Grid item xs={12} md={4} sx={dashboardStyles.radialChartWrapper()}>
+        <Grid size={{ xs: 12, md: 4 }} >
           <RadialScoreChart
             title="Overall Compliance Score"
             score={65}
@@ -35,19 +35,19 @@ const Dashboard = () => {
           />
         </Grid>
 
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <PerformanceLeaders />
         </Grid>
 
-        <Grid item xs={12} md={4} sx={dashboardStyles.recentActivitiesGrid}>
+        <Grid size={{ xs: 12, md: 4 }} sx={dashboardStyles.recentActivitiesGrid}>
           <RecentActivities />
         </Grid>
 
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <PerformanceBarChart />
         </Grid>
 
-        <Grid item xs={12} md={4} sx={dashboardStyles.radialChartWrapper()}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <RadialScoreChart
             title="Audit Readiness"
             score={80}
@@ -55,6 +55,10 @@ const Dashboard = () => {
             color="#4caf50"
             innerRadius="80%"
             barSize={20}
+            stats={[
+              { value: 12, label: "Overdue Stds", color: "#1D3557" },
+              { value: 5, label: "Missing Evidence", color: "#1D3557" }
+            ]}
           />
         </Grid>
       </Grid>

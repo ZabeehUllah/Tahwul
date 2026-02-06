@@ -40,12 +40,11 @@ export default function RadialScoreChart({
         <Paper
             elevation={0}
             sx={{
-                p: 0,
                 borderRadius: 4,
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                border: "1px solid #E0E0E0"
+                border: "1px solid #E0E8ED"
             }}
         >
             <Typography sx={{
@@ -57,60 +56,62 @@ export default function RadialScoreChart({
                 {title}
             </Typography>
 
-            <Box sx={{ flex: 1, minHeight: 300, position: "relative" }}>
-                <ResponsiveContainer width="100%" height="100%">
-                    <RadialBarChart
-                        cx="50%"
-                        cy="70%"
-                        innerRadius={innerRadius}
-                        outerRadius="100%"
-                        barSize={barSize}
-                        data={data}
-                        startAngle={180}
-                        endAngle={0}
-                    >
-                        {/* Background Track Layer */}
-                        <PolarAngleAxis
-                            type="number"
-                            domain={[0, total]}
-                            angleAxisId={0}
-                            tick={false}
-                        />
-                        <RadialBar
-                            dataKey="value"
-                            cornerRadius={10}
-                            fill={color}
-                            background={{ fill: "#f5f5f5" }}
-                        />
-                    </RadialBarChart>
-                </ResponsiveContainer>
+            <Box sx={{ flex: 1, minHeight: 280, position: "relative", display: "flex", flexDirection: "column" }}>
+                <Box sx={{ flex: 1, position: "relative" }}>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <RadialBarChart
+                            cx="50%"
+                            cy="70%"
+                            innerRadius={innerRadius}
+                            outerRadius="100%"
+                            barSize={barSize}
+                            data={data}
+                            startAngle={180}
+                            endAngle={0}
+                        >
+                            {/* Background Track Layer */}
+                            <PolarAngleAxis
+                                type="number"
+                                domain={[0, total]}
+                                angleAxisId={0}
+                                tick={false}
+                            />
+                            <RadialBar
+                                dataKey="value"
+                                cornerRadius={10}
+                                fill={color}
+                                background={{ fill: "#f5f5f5" }}
+                            />
+                        </RadialBarChart>
+                    </ResponsiveContainer>
 
-                {/* Center Text */}
-                <Box
-                    sx={{
-                        position: "absolute",
-                        top: "60%",
-                        left: "50%",
-                        transform: "translate(-50%, -10%)",
-                        textAlign: "center"
-                    }}
-                >
-                    <Typography variant="h3" fontWeight="bold" color="#1a237e">
-                        {score}%
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {subtext}
-                    </Typography>
+                    {/* Center Text */}
+                    <Box
+                        sx={{
+                            position: "absolute",
+                            top: "60%",
+                            left: "50%",
+                            transform: "translate(-50%, -10%)",
+                            textAlign: "center"
+                        }}
+                    >
+                        <Typography variant="h3" fontWeight="bold" color="#1a237e">
+                            {score}%
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {subtext}
+                        </Typography>
+                    </Box>
                 </Box>
 
                 {stats && (
-                    <Box sx={{ display: "flex", justifyContent: "space-around", mt: 4 }}>
+                    <Box sx={{ display: "flex", justifyContent: "space-around", borderTop: '1px solid #E0E8ED', p: 2, }}>
                         {stats.map((stat, index) => (
-                            <Box key={index} textAlign="center" sx={{ p: 1, borderRadius: 2, bgcolor: "#f9f9f9", minWidth: 80 }}>
-                                <Typography variant="h4" fontWeight="bold" color={stat.color}>
+                            <Box key={index} textAlign="center" sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                                <Typography variant="h4" fontWeight="bold" color={stat.color} sx={{ fontSize: "1.5rem" }}>
                                     {stat.value}
                                 </Typography>
-                                <Typography variant="caption" color="text.secondary" fontWeight={600}>
+                                <Typography variant="caption" color="#8597A8">
                                     {stat.label}
                                 </Typography>
                             </Box>

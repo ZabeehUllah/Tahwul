@@ -19,7 +19,7 @@ const verticalLine: SxProps = {
   top: 0,
   bottom: 0,
   width: "1px",
-  backgroundColor: "#E0E0E0",
+  backgroundColor: "#E0E8ED",
   zIndex: 1,
 };
 
