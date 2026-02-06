@@ -6,6 +6,7 @@ export interface Column<T> {
   format?: (value: any, row: T) => React.ReactNode;
   cellStyle?: React.CSSProperties;
   headerStyle?: React.CSSProperties;
+  sortable?: boolean;
 }
 
 export interface EvidenceTableProps<T> {

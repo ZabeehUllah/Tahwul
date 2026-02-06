@@ -81,29 +81,6 @@ export const LeadersData = [
   },
 ];
 
-export const rows: User[] = [
-  {
-    id: 1,
-    documentNumber: "5.4.1.1",
-    documentName: "Digital_Transformation_Plan.pdf",
-    documentLead: "Ahmed Khaled",
-    documentPreparer: "Ahmed Khaled",
-    date: "2025-08-01",
-    dueDate: "2025-08-01",
-    status: "Approved",
-  },
-  {
-    id: 2,
-    documentNumber: "5.4.1.2",
-    documentName: "Marketing_Strategy.pdf",
-    documentLead: "Sarah Smith",
-    documentPreparer: "John Doe",
-    date: "2025-08-15",
-    dueDate: "2025-09-01",
-    status: "Pending",
-  },
-];
-
 export const OverviewDetailsData = [
   {
     label: "Objective",
@@ -134,17 +111,42 @@ D. Required Competencies, Capabilities, And Skills Necessary To Achieve The Stra
   },
 ];
 
+export const rows: User[] = [
+  {
+    id: 1,
+    documentNumber: "5.4.1.1",
+    documentName: "Digital_Transformation_Plan.pdf",
+    documentLead: "Ahmed Khaled",
+    documentPreparer: "Ahmed Khaled",
+    date: "2025-08-01",
+    dueDate: "2025-08-01",
+    status: "Approved",
+  },
+  {
+    id: 2,
+    documentNumber: "5.4.1.2",
+    documentName: "Marketing_Strategy.pdf",
+    documentLead: "Sarah Smith",
+    documentPreparer: "John Doe",
+    date: "2025-08-15",
+    dueDate: "2025-09-01",
+    status: "Pending",
+  },
+];
+
 export const columns: Column<User>[] = [
   {
     id: "documentNumber",
     label: "Document Number",
     minWidth: 100,
     align: "center",
+    sortable: true,
   },
   {
     id: "documentName",
     label: "Document Name",
     minWidth: 200,
+    sortable: true,
   },
   {
     id: "documentLead",
@@ -155,16 +157,19 @@ export const columns: Column<User>[] = [
     id: "documentPreparer",
     label: "Document Preparer",
     minWidth: 150,
+    sortable: true,
   },
   {
     id: "date",
     label: "Date",
     minWidth: 120,
+    sortable: true,
   },
   {
     id: "dueDate",
     label: "Due Date",
     minWidth: 120,
+    sortable: true,
   },
   {
     id: "status",
@@ -182,5 +187,6 @@ export const columns: Column<User>[] = [
         {value}
       </span>
     ),
+    sortable: true,
   },
 ];
