@@ -33,6 +33,7 @@ const menu: SxProps = {
 
 const menuItem: SxProps = {
   color: "inherit",
+  flex: "unset",
   "&.active": {
     bgcolor: "rgba(29,53,87,0.8)",
     fontWeight: 600,

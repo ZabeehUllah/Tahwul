@@ -1,10 +1,60 @@
+import { Box, Grid } from "@mui/material";
+import TimelineSection from "../components/ui/TimelineSection";
+import StatsOverview from "../components/ui/StatsOverview";
+import ProgressStatusGrid from "../components/ui/ProgressStatusGrid";
+import RadialScoreChart from "../components/ui/RadialScoreChart";
+import PerformanceLeaders from "../components/ui/PerformanceLeaders";
+import PerformanceBarChart from "../components/ui/PerformanceBarChart";
+import RecentActivities from "../features/strategic-planning/evidence/recent-activities/recent-activities.component";
+
 const Dashboard = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-primary">
-        Dashboard 🚀
-      </h1>
-    </div>
+    <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+      <Box sx={{ width: "100%" }}>
+        <TimelineSection />
+      </Box>
+
+      <Box sx={{ width: "100%" }}>
+        <StatsOverview />
+      </Box>
+
+      <Box sx={{ width: "100%" }}>
+        <ProgressStatusGrid />
+      </Box>
+
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <RadialScoreChart
+            title="Overall Compliance Score"
+            score={65}
+            subtext="Basic Standards 2025"
+            color="#f44336"
+            innerRadius="80%"
+            barSize={20}
+          />
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <PerformanceLeaders />
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }} sx={{ display: 'flex' }}>
+          <RecentActivities />
+        </Grid>
+
+        <Grid size={{ xs: 12, md: 8 }}>
+          <PerformanceBarChart />
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <RadialScoreChart
+            title="Audit Readiness"
+            score={80}
+            subtext="Readiness Level"
+            color="#4caf50"
+            innerRadius="80%"
+            barSize={20}
+          />
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 

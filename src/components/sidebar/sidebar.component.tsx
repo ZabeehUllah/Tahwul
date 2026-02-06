@@ -8,6 +8,7 @@ import TrackChangesIcon from "@mui/icons-material/TrackChanges";
 
 import paths from "../../router/router.paths";
 import sidebarStyles from "./sidebar.styles";
+import Logo from "../../assets/logo";
 
 const menuItems = [
   { name: "Dashboard", path: paths.DASHBOARD, icon: <DashboardIcon /> },
@@ -25,7 +26,7 @@ const Sidebar: React.FC = () => {
     >
       {/* Logo / Brand */}
       <Box sx={sidebarStyles.logo}>
-        Tahwul
+        <img src="./images/logo.svg" alt="Logo" />
       </Box>
 
       {/* Menu */}

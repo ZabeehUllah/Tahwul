@@ -5,6 +5,7 @@ const wrapper: SxProps = {
   border: "1px solid #E0E8ED",
   borderRadius: "10px",
   padding: "20px",
+  flex: 1
 };
 
 const title: SxProps = {
