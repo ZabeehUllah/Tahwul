@@ -12,7 +12,7 @@ export const menuItems = [
   },
   {
     name: "Perspectives",
-    path: paths.STRATEGIC_PLANNING,
+    path: paths.PERSPECTIVES,
     icon: <MedicalFileIcon color="currentColor" />,
   },
   {

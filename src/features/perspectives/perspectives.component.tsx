@@ -9,11 +9,11 @@ import {
   type ToggleTabValue,
 } from "./toggle-switch/toggle-componen.constants";
 
-import styles from "./strategic-planning.styles";
-import { TAB_CONTENT } from "./strategic-planning.constant";
+import styles from "./perspectives.styles";
+import { TAB_CONTENT } from "./perspectives.constant";
 import { OverviewCardsData } from "./DUMMY_DATA";
 
-const StrategicPlanning = () => {
+const Perspectives = () => {
   const [activeTab, setActiveTab] = useState<ToggleTabValue>(
     ToggleTabs.OVERVIEW,
   );
@@ -42,4 +42,4 @@ const StrategicPlanning = () => {
   );
 };
 
-export default StrategicPlanning;
+export default Perspectives;

@@ -1,7 +1,7 @@
 const paths = {
     DEFAULT: '/',
     DASHBOARD: '/dashboard',
-    STRATEGIC_PLANNING: '/strategic-planning',
+    PERSPECTIVES: '/perspectives',
     TRACKING: '/tracking',
     DOCUMENTS: '/documents',
 

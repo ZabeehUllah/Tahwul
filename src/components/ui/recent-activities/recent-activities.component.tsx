@@ -1,5 +1,6 @@
 import { Box, Divider, Typography } from "@mui/material";
-import { RecentActivitiesData } from "../../DUMMY_DATA";
+
+import { RecentActivitiesData } from "../../../features/perspectives/DUMMY_DATA";
 import styles from "./recent-activities.styles";
 
 const RecentActivities = () => {

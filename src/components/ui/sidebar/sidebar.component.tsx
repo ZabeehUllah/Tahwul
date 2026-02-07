@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Box, Drawer, List, ListItemButton, ListItemIcon, ListItemText, IconButton, Tooltip, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Drawer,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  IconButton,
+  Tooltip,
+  useMediaQuery,
+} from "@mui/material";
 
-import paths from "../../../router/router.paths";
 import sidebarStyles from "./sidebar.styles";
 import ArrowLeft from "../../../assets/arrowLeftIcon";
 import ArrowRight from "../../../assets/arrowRightIcon";
-import HomeIcon from "../../../assets/homeIcon";
-import MedicalFileIcon from "../../../assets/medicalFileIcon";
-import FileIcon from "../../../assets/fileIcon";
-import ProfileIcon from "../../../assets/profileIcon";
-
-const menuItems = [
-  { name: "Dashboard", path: paths.DASHBOARD, icon: <HomeIcon color="currentColor" /> },
-  { name: "Perspectives", path: paths.STRATEGIC_PLANNING, icon: <MedicalFileIcon color="currentColor" /> },
-  { name: "Tasks", path: paths.TRACKING, icon: <FileIcon color="currentColor" /> },
-  { name: "Documents", path: paths.DOCUMENTS, icon: <ProfileIcon color="currentColor" /> },
-];
+import { menuItems } from "./sidebar.constant";
 
 const Sidebar: React.FC = () => {
   const isTablet = useMediaQuery("(max-width:900px)");
@@ -39,10 +38,7 @@ const Sidebar: React.FC = () => {
       PaperProps={{ sx: sidebarStyles.paper(isCollapsed) }}
     >
       {!isTablet && (
-        <IconButton
-          onClick={toggleSidebar}
-          sx={sidebarStyles.toggleButton}
-        >
+        <IconButton onClick={toggleSidebar} sx={sidebarStyles.toggleButton}>
           {isCollapsed ? <ArrowRight /> : <ArrowLeft />}
         </IconButton>
       )}
@@ -66,7 +62,9 @@ const Sidebar: React.FC = () => {
               to={item.path}
               sx={sidebarStyles.menuItem}
             >
-              <ListItemIcon color="red" sx={sidebarStyles.icon}>{item.icon}</ListItemIcon>
+              <ListItemIcon color="red" sx={sidebarStyles.icon}>
+                {item.icon}
+              </ListItemIcon>
               {!isCollapsed && <ListItemText primary={item.name} />}
             </ListItemButton>
           </Tooltip>

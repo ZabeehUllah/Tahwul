@@ -4,7 +4,7 @@ import StatsOverview from "./status-overview/status-overview.component";
 import ProgressStatusGrid from "./progress-status-grid/progress-status-grid.component";
 import RadialScoreChart from "./radial-score-chart/radial-score-chart.component";
 import PerformanceLeaders from "./performance-leader/performance-leaders.component";
-import RecentActivities from "../../features/strategic-planning/evidence/recent-activities/recent-activities.component";
+import RecentActivities from "../../components/ui/recent-activities/recent-activities.component";
 import dashboardStyles from "./dashboard.styles";
 import PerformanceBarChart from "./performance-bar-chart/performance-bar-chart.component";
 
