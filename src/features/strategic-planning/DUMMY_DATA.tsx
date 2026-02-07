@@ -2,7 +2,7 @@ import CompletedIcon from "../../assets/completedIcon";
 import EvidenceIcon from "../../assets/evidenceIcon";
 import InProgressIcon from "../../assets/inProgressIcon";
 import UnderReviewIcon from "../../assets/underReviewIcon";
-import type { Column } from "../../components/table-component/table-component.types";
+import type { Column } from "../../components/ui/table-component/table-component.types";
 import type { User } from "../../types/common.types";
 import { getStatusStyles } from "../../utils/status-styles.util";
 

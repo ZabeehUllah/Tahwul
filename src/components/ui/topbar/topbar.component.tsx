@@ -13,8 +13,8 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState, type MouseEvent } from "react";
-import NotificationIcon from "../../assets/notificationIcon";
-import CaretDown from "../../assets/caretDownIcon";
+import NotificationIcon from "../../../assets/notificationIcon";
+import CaretDown from "../../../assets/caretDownIcon";
 
 export default function Topbar() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

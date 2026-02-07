@@ -2,8 +2,8 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
 
-import Sidebar from "../sidebar/sidebar.component";
-import Topbar from "../topbar/topbar.component";
+import Sidebar from "../ui/sidebar/sidebar.component";
+import Topbar from "../ui/topbar/topbar.component";
 import layoutStyles from "./layout.styles";
 
 export const Layout: React.FC = () => {

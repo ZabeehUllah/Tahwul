@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 
 import Comments from "./comments/comments.component";
 import RecentActivities from "./recent-activities/recent-activities.component";
-import CustomDataGrid from "../../../components/table-component/table-component";
+import CustomDataGrid from "../../../components/ui/table-component/table-component";
 
 import styles from "./evidence-tab.styles";
 import { columns, rows } from "../DUMMY_DATA";

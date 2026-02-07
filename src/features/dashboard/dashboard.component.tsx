@@ -1,12 +1,12 @@
 import { Box, Grid } from "@mui/material";
-import TimelineSection from "../../components/ui/TimelineSection";
-import StatsOverview from "../../components/ui/StatsOverview";
-import ProgressStatusGrid from "../../components/ui/ProgressStatusGrid";
-import RadialScoreChart from "../../components/ui/RadialScoreChart";
-import PerformanceLeaders from "../../components/ui/PerformanceLeaders";
-import PerformanceBarChart from "../../components/ui/PerformanceBarChart";
+import TimelineSection from "./timeline/timeline.component";
+import StatsOverview from "./status-overview/status-overview.component";
+import ProgressStatusGrid from "./progress-status-grid/progress-status-grid.component";
+import RadialScoreChart from "./radial-score-chart/radial-score-chart.component";
+import PerformanceLeaders from "./performance-leader/performance-leaders.component";
 import RecentActivities from "../../features/strategic-planning/evidence/recent-activities/recent-activities.component";
 import dashboardStyles from "./dashboard.styles";
+import PerformanceBarChart from "./performance-bar-chart/performance-bar-chart.component";
 
 const Dashboard = () => {
   return (
@@ -24,7 +24,7 @@ const Dashboard = () => {
       </Box>
 
       <Grid container spacing={2}>
-        <Grid size={{ xs: 12, md: 4 }} >
+        <Grid size={{ xs: 12, md: 4 }}>
           <RadialScoreChart
             title="Overall Compliance Score"
             score={65}
@@ -39,7 +39,10 @@ const Dashboard = () => {
           <PerformanceLeaders />
         </Grid>
 
-        <Grid size={{ xs: 12, md: 4 }} sx={dashboardStyles.recentActivitiesGrid}>
+        <Grid
+          size={{ xs: 12, md: 4 }}
+          sx={dashboardStyles.recentActivitiesGrid}
+        >
           <RecentActivities />
         </Grid>
 
@@ -57,7 +60,7 @@ const Dashboard = () => {
             barSize={20}
             stats={[
               { value: 12, label: "Overdue Stds", color: "#1D3557" },
-              { value: 5, label: "Missing Evidence", color: "#1D3557" }
+              { value: 5, label: "Missing Evidence", color: "#1D3557" },
             ]}
           />
         </Grid>

@@ -1,8 +1,8 @@
-import FileIcon from "../../assets/fileIcon";
-import HomeIcon from "../../assets/homeIcon";
-import MedicalFileIcon from "../../assets/medicalFileIcon";
-import ProfileIcon from "../../assets/profileIcon";
-import paths from "../../router/router.paths";
+import FileIcon from "../../../assets/fileIcon";
+import HomeIcon from "../../../assets/homeIcon";
+import MedicalFileIcon from "../../../assets/medicalFileIcon";
+import ProfileIcon from "../../../assets/profileIcon";
+import paths from "../../../router/router.paths";
 
 export const menuItems = [
   {

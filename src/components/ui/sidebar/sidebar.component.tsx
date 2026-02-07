@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Box, Drawer, List, ListItemButton, ListItemIcon, ListItemText, IconButton, Tooltip, useMediaQuery } from "@mui/material";
 
-import paths from "../../router/router.paths";
+import paths from "../../../router/router.paths";
 import sidebarStyles from "./sidebar.styles";
-import ArrowLeft from "../../assets/arrowLeftIcon";
-import ArrowRight from "../../assets/arrowRightIcon";
-import HomeIcon from "../../assets/homeIcon";
-import MedicalFileIcon from "../../assets/medicalFileIcon";
-import FileIcon from "../../assets/fileIcon";
-import ProfileIcon from "../../assets/profileIcon";
+import ArrowLeft from "../../../assets/arrowLeftIcon";
+import ArrowRight from "../../../assets/arrowRightIcon";
+import HomeIcon from "../../../assets/homeIcon";
+import MedicalFileIcon from "../../../assets/medicalFileIcon";
+import FileIcon from "../../../assets/fileIcon";
+import ProfileIcon from "../../../assets/profileIcon";
 
 const menuItems = [
   { name: "Dashboard", path: paths.DASHBOARD, icon: <HomeIcon color="currentColor" /> },
