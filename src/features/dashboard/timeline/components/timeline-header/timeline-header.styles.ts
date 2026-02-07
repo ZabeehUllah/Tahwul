@@ -25,8 +25,16 @@ const yearSelector: SxProps = {
   gap: 1,
 };
 
+const menuPaper: SxProps = {
+  borderRadius: 2,
+  mt: 1,
+  minWidth: 120,
+  overflow: "hidden",
+};
+
 export default {
   header,
   title,
   yearSelector,
+  menuPaper,
 };
