@@ -1,4 +1,4 @@
-import type { SxProps, Theme } from "@mui/material";
+import type { SxProps } from "@mui/material";
 
 const root: SxProps = {
   border: "1px solid #E0E8ED",
